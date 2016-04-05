@@ -1,0 +1,7 @@
+<span style="text-decoration:underline">Items in cart</span>:
+<br>
+{{#each shoppingCart.items as |item|}}
+  {{item.title}} -- {{item.cost}}
+  <br>
+{{/each}}
+<button {{action 'emptyCart'}}>Empty cart</button>

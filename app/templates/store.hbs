@@ -1,0 +1,26 @@
+
+
+<ul>
+  {{#each model.products as |product|}}
+    <div class="row">
+      <div class="col-sm-8">
+        <h4 style="font-family:sans-serif">{{product.title}}</h4>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        {{#link-to 'product' product.id}}More information{{/link-to}}
+      </div>
+      <div class="col-sm-4">
+
+        <img src={{product.image}} alt="{{product.title}} product image" style="height:200px;width:200px;">
+      </div>
+    </div>
+    <hr>
+  {{/each}}
+</ul>
+<button {{action 'deleteAllProducts'}}>Delete all products</button>
+<br>
+{{display-cart}}
